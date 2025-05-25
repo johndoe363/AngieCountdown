@@ -92,14 +92,14 @@ const Calendar = ({ year, month, onDateClick, countdownEnd }) => {
     );
   }
 
-  return (
+ return (
     <div className="calendar-container" style={{ position: "relative", overflow: "hidden" }}>
       {/* Falling blossoms */}
-      <img src="/images/blossom.png" className="cherry-blossom" alt="blossom" />
-      <img src="/images/blossom.png" className="cherry-blossom" alt="blossom" />
-      <img src="/images/blossom.png" className="cherry-blossom" alt="blossom" />
-      <img src="/images/blossom.png" className="cherry-blossom" alt="blossom" />
-      <img src="/images/blossom.png" className="cherry-blossom" alt="blossom" />
+      <img src={process.env.PUBLIC_URL + "/images/blossom.png"} className="cherry-blossom" alt="blossom" />
+      <img src={process.env.PUBLIC_URL + "/images/blossom.png"} className="cherry-blossom" alt="blossom" />
+      <img src={process.env.PUBLIC_URL + "/images/blossom.png"} className="cherry-blossom" alt="blossom" />
+      <img src={process.env.PUBLIC_URL + "/images/blossom.png"} className="cherry-blossom" alt="blossom" />
+      <img src={process.env.PUBLIC_URL + "/images/blossom.png"} className="cherry-blossom" alt="blossom" />
 
       {/* Calendar header and grid */}
       <div className="calendar-header">
