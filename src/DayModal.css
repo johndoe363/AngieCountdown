@@ -1,0 +1,106 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 20, 40, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #18121b;
+  color: #fff;
+  border-radius: 16px;
+  padding: 32px 24px 24px 24px;
+  max-width: 400px;
+  width: 90vw;
+  position: relative;
+  box-shadow: 0 8px 32px #000a;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #ffb7c5;
+  cursor: pointer;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 20, 40, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeInModal 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.modal-content {
+  background: #18121b;
+  color: #fff;
+  border-radius: 16px;
+  padding: 32px 24px 24px 24px;
+  max-width: 400px;
+  width: 90vw;
+  position: relative;
+  box-shadow: 0 8px 32px #000a;
+  animation: fadeInModal 0.5s cubic-bezier(.4,0,.2,1);
+}
+.modal-content textarea {
+  background: #ffe4ec;
+  color: #2d1e2f;
+  border: 1.5px solid #ffb7c5;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  margin-top: 12px;
+  box-shadow: 0 2px 8px #ffb7c544;
+  transition: border-color 0.2s;
+  width: 100%;
+  min-height: 60px;
+  box-sizing: border-box;
+}
+
+
+.modal-content .modal-send-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: #ffb7c5;
+  color: #2d1e2f;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal-content .modal-send-btn:disabled {
+  background: #ffe4ec;
+  cursor: not-allowed;
+}
+
+
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #ff2a2a;
+}

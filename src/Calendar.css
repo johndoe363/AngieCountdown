@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Quicksand:wght@400;700&display=swap');
+
+body {
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+  min-height: 100vh;
+  font-family: 'Quicksand', Arial, sans-serif;
+  color: #f3e9f1;
+}
+
+.calendar-container {
+  max-width: 420px;
+  margin: 32px auto;
+  background: rgba(34, 33, 44, 0.97);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(80, 30, 60, 0.22);
+  padding: 24px 16px 32px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar-header h2 {
+  font-family: 'Special Elite', 'Shadows Into Light', cursive;
+  color: #ffb7c5;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #2d1e2f;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-cell {
+  background: #2d1e2f;
+  border-radius: 10px;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 4px rgba(255, 183, 197, 0.10);
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  position: relative;
+  color: #f3e9f1;
+}
+
+.calendar-cell.header {
+  background: transparent;
+  font-weight: bold;
+  color: #bfa2c9;
+  padding: 8px 0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 4px #232526;
+}
+
+.calendar-cell.today {
+  background: #3e2c3a;
+  border: 2px solid #ff2a2a;
+  font-weight: bold;
+  color: #ffb7c5;
+  box-shadow:
+    0 0 16px 6px #ff2a2a,
+    0 0 2px 1px #fff inset;
+  z-index: 2;
+  position: relative;
+  animation: red-glow 2s infinite alternate;
+}
+@keyframes red-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 16px 6px #ff2a2a,
+      0 0 2px 1px #fff inset;
+  }
+  50% {
+    box-shadow:
+      0 0 28px 12px #ff2a2a,
+      0 0 4px 2px #fff inset;
+  }
+}
+
+.owl-cave-cell {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  width: 36px;
+  height: 36px;
+  opacity: 0.85;
+  pointer-events: none;
+  filter: drop-shadow(0 0 12px #fff) drop-shadow(0 0 8px #ff2a2a);
+  z-index: 10;
+  animation: owl-glow 1.2s infinite alternate;
+}
+
+@keyframes owl-glow {
+  0% {
+    filter: drop-shadow(0 0 12px #fff) drop-shadow(0 0 8px #ff2a2a);
+    opacity: 1;
+  }
+  100% {
+    filter: drop-shadow(0 0 24px #fff) drop-shadow(0 0 16px #ff2a2a);
+    opacity: 0.92;
+  }
+}
+
+
+
+
+
+.calendar-cell:hover:not(.disabled):not(.header) {
+  background: #ffb7c5;
+  color: #2d1e2f;
+  transform: scale(1.07);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.cherry-blossom {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 8px #ffb7c5);
+}
+
+/* Multiple petals with different delays and positions */
+.cherry-blossom:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 12s;
+}
+.cherry-blossom:nth-child(2) {
+  left: 30%;
+  animation-delay: 4s;
+  animation-duration: 15s;
+}
+.cherry-blossom:nth-child(3) {
+  left: 50%;
+  animation-delay: 2s;
+  animation-duration: 10s;
+}
+.cherry-blossom:nth-child(4) {
+  left: 70%;
+  animation-delay: 6s;
+  animation-duration: 14s;
+}
+.cherry-blossom:nth-child(5) {
+  left: 90%;
+  animation-delay: 8s;
+  animation-duration: 13s;
+}
+
+@keyframes break {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 4px #ff2a2a);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.7;
+    filter: drop-shadow(0 0 10px #ff0000);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    filter: drop-shadow(0 0 0 #ff0000);
+  }
+}
+
+.breaking {
+  animation: break 1s forwards;
+}
+
+
