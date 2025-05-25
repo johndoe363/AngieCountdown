@@ -72,7 +72,7 @@ const Calendar = ({ year, month, onDateClick, countdownEnd }) => {
         {day}
         {showOwl && (
           <img
-            src="/images/owl-cave.png"
+            src={process.env.PUBLIC_URL + "/images/owl-cave.png"}
             alt="Owl Cave Symbol"
             className={`owl-cave-cell${isToday && breaking ? " breaking" : ""}`}
             onClick={isToday
