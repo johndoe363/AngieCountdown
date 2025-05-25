@@ -115,7 +115,7 @@ function DayModal({ date, content, onClose }) {
         {date === "2025-05-25" && (
           <audio
             ref={audioRef}
-            src="/audio/twin-peaks-intro.mp3"
+            src={process.env.PUBLIC_URL + '/audio/twin-peaks-intro.mp3'}
             autoPlay
             preload="auto"
           />
