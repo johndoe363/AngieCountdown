@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AngieCountdown/static/css/main.7cb9a00c.css",
-    "main.js": "/AngieCountdown/static/js/main.39a3a709.js",
+    "main.css": "/AngieCountdown/static/css/main.400dca90.css",
+    "main.js": "/AngieCountdown/static/js/main.355a226c.js",
     "static/js/488.e115780b.chunk.js": "/AngieCountdown/static/js/488.e115780b.chunk.js",
     "index.html": "/AngieCountdown/index.html",
-    "main.7cb9a00c.css.map": "/AngieCountdown/static/css/main.7cb9a00c.css.map",
-    "main.39a3a709.js.map": "/AngieCountdown/static/js/main.39a3a709.js.map",
+    "main.400dca90.css.map": "/AngieCountdown/static/css/main.400dca90.css.map",
+    "main.355a226c.js.map": "/AngieCountdown/static/js/main.355a226c.js.map",
     "488.e115780b.chunk.js.map": "/AngieCountdown/static/js/488.e115780b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cb9a00c.css",
-    "static/js/main.39a3a709.js"
+    "static/css/main.400dca90.css",
+    "static/js/main.355a226c.js"
   ]
 }
